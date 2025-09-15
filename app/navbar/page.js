@@ -1,30 +1,40 @@
-import Link from "next/link"
+import Link from 'next/link';
 
-const links=[
-    {href:"/client",label:"client"},
-    {href:"/query",label:"query"},
-    {href:"/drinks",label:"drinks"},
-    {href:"/tasks",label:"tasks"},
-]
-
+const links = [
+  { href: '/client', label: 'client' },
+  { href: '/drinks', label: 'drinks' },
+  { href: '/tasks', label: 'tasks' },
+  { href: '/query', label: 'react-query' },
+];
 
 const Navbar = () => {
   return (
-    <div className="py-4 bg-blue-200 h-15 text-center flex justify-baseline items-center p-0 m-0">
-      <h1 className="text-red-500">Navbar</h1>
-      <Link href='/' className="btn btn-primary">    </Link>
-    <ul className="menu menu-horizontal flex justify-center items-center p-0 m-0 mx-auto md:ml-8">
-        {
-            links.map((link)=>{
-                <li className="text-base  p-2 bg-red-100 text-blue-500 border-solid border-black-500 bg-green-10">
-                    <Link href={link.href}>{link.label}</Link>
-                    </li>
-            })
-        }
-        
-    </ul>
-    </div>
-  )
-}
+    <nav className='bg-primary text-primary-content shadow-lg'>
+      <div className='navbar px-8 max-w-6xl mx-auto'>
+        <div className='navbar-start'>
+          <Link href='/' className='btn btn-ghost text-xl font-bold'>
+            Next.js
+          </Link>
+        </div>
+        <div className='navbar-center'>
+          <ul className='menu menu-horizontal px-1 gap-5 flex justify-center'>
+            {links.map((link) => {
+              return (
+                <li key={link.href} className='px-5 py-2 border-solid bg-red-50 border-1 border-black-100 hover:bg-blue-500 ' >
+                  <Link href={link.href} className='btn btn-ghost capitalize text-primary-content hover:bg-primary-focus'>
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div className='navbar-end'>
+          <div className='badge badge-secondary'>v1.0</div>
+        </div>
+      </div>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
