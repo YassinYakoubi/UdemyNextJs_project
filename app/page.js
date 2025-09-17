@@ -44,6 +44,7 @@ function page() {
           </div>
         </div>
       </div>
+      <Link href='/drinks' className='btn btn-accent p-4 border-solid border-black-500 border-1 bg-pink-100'> drinks</Link>
 
       <div className='alert alert-info'>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-current shrink-0 w-6 h-6">

@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Children } from 'react'
 
 export const DrinksLayout = () => {
   return (
     <div className='max-w-2xl'>
-        <div className='mockup-code mb-0'>
+        <div className='mockup-code mb-8'>
             <pre data-prefix='$'>
-                <code>ihbgiuyrefb</code>            </pre>
+                <code>npm run dev</code>           
+                
+             </pre>
         </div>
+       
     </div>
   )
 }
