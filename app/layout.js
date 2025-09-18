@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <div className='breadcrumbs text-sm mb-6 text-base-content/70'>
             <ul>
               <li><a className='text-primary hover:text-primary-focus'>Home</a></li>
-              <li className='text-base-content'>Pavde</li>
+             
             </ul>
           </div>
           {children}
